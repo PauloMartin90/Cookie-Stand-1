@@ -53,7 +53,7 @@ Store.prototype.displaySeattle = function () {
 Store.prototype.displayTokyo = function () {
   for (var i = 0; i < tokyo.averageCustomersPerHour.length; i++) {
     //make a td
-    var tdElement = document.createElement('td'); 
+    var tdElement = document.createElement('td');
 
     //put shit in it
     tdElement.textContent = this.averageCookiesPerHour[i];
@@ -68,24 +68,6 @@ Store.prototype.displayTokyo = function () {
   tdLastElement.textContent = this.totalCookiesPerDay;
   trLastElement.appendChild(tdLastElement);
 };
-// Store.prototype.displayDubai = function () {
-//   for (var i = 0; i < dubai.averageCustomersPerHour.length; i++) {
-//     //make a td
-//     var tdElement = document.createElement('td');
-
-//     //put shit in it
-//     tdElement.textContent = this.averageCookiesPerHour[i];
-
-//     //locate the section with id=profiles
-//     var trElement = document.getElementById('Table-body-dubai');
-
-//     trElement.appendChild(tdElement);
-//   }
-//   var tdLastElement = document.createElement('td');
-//   var trLastElement = document.getElementById('Table-body-lima');
-//   tdLastElement.textContent = this.totalCookiesPerDay;
-//   trLastElement.appendChild(tdLastElement);
-// };
 Store.prototype.displayDubai = function () {
   for (var i = 0; i < dubai.averageCustomersPerHour.length; i++) {
     //make a td
