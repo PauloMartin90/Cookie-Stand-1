@@ -1,20 +1,5 @@
 'use strict';
 
-// Stores the min/max hourly customers, and the average cookies per customer, in object properties
-// Uses a method of that object to generate a random number of customers per hour. Objects/Math/random
-// Calculate and store the simulated amounts of cookies purchased for each hour at each location using average cookies purchased and the random number of customers generated
-// Store the results for each location in a separate array… perhaps as a property of the object representing that location
-// Display the values of each array as unordered lists in the browser
-
-// Calculating the sum of these hourly totals; your output for each location should look like this:
-
-// Location 	Min / Cust 	Max / Cust 	Avg Cookie / Sale
-// Seattle 	23 	65 	6.3
-// Tokyo 	3 	24 	1.2
-// Dubai 	11 	38 	3.7
-// Paris 	20 	38 	2.3
-// Lima 	2 	16 	4.6
-
 //var tableBodySeattle = document.getElementById;('Table-body-seattle');
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
@@ -30,7 +15,7 @@ var Store = function(name, minCustomers, maxCustomers, avgPerCookiesPerCustomer)
   this.averageCookiesPerHour = [];
   this.totalCookiesPerDay = 0;
   // methods
-  // take methods out of the constructor 
+  // take methods out of the constructor
   // this.numOfCustomersPerHour();
   // this.cookiesPerCustomer();
 };
@@ -51,7 +36,7 @@ Store.prototype.cookiesPerCustomer = function() {
 Store.prototype.displaySeattle = function () {
   for (var i = 0; i < seattle.averageCustomersPerHour.length; i++) {
     //make a td
-    var tdElement = document.createElement('td'); 
+    var tdElement = document.createElement('td');
 
     //put shit in it
     tdElement.textContent = this.averageCookiesPerHour[i];
@@ -60,6 +45,10 @@ Store.prototype.displaySeattle = function () {
     var trElement = document.getElementById('Table-body-seattle');
     trElement.appendChild(tdElement);
   }
+  var tdLastElement = document.createElement('td');
+  var trLastElement = document.getElementById('Table-body-seattle');
+  tdLastElement.textContent = this.totalCookiesPerDay;
+  trLastElement.appendChild(tdLastElement);
 };
 Store.prototype.displayTokyo = function () {
   for (var i = 0; i < tokyo.averageCustomersPerHour.length; i++) {
@@ -74,11 +63,33 @@ Store.prototype.displayTokyo = function () {
 
     trElement.appendChild(tdElement);
   }
+  var tdLastElement = document.createElement('td');
+  var trLastElement = document.getElementById('Table-body-tokyo');
+  tdLastElement.textContent = this.totalCookiesPerDay;
+  trLastElement.appendChild(tdLastElement);
 };
+// Store.prototype.displayDubai = function () {
+//   for (var i = 0; i < dubai.averageCustomersPerHour.length; i++) {
+//     //make a td
+//     var tdElement = document.createElement('td');
+
+//     //put shit in it
+//     tdElement.textContent = this.averageCookiesPerHour[i];
+
+//     //locate the section with id=profiles
+//     var trElement = document.getElementById('Table-body-dubai');
+
+//     trElement.appendChild(tdElement);
+//   }
+//   var tdLastElement = document.createElement('td');
+//   var trLastElement = document.getElementById('Table-body-lima');
+//   tdLastElement.textContent = this.totalCookiesPerDay;
+//   trLastElement.appendChild(tdLastElement);
+// };
 Store.prototype.displayDubai = function () {
   for (var i = 0; i < dubai.averageCustomersPerHour.length; i++) {
     //make a td
-    var tdElement = document.createElement('td'); 
+    var tdElement = document.createElement('td');
 
     //put shit in it
     tdElement.textContent = this.averageCookiesPerHour[i];
@@ -88,25 +99,15 @@ Store.prototype.displayDubai = function () {
 
     trElement.appendChild(tdElement);
   }
-};
-Store.prototype.displayDubai = function () {
-  for (var i = 0; i < dubai.averageCustomersPerHour.length; i++) {
-    //make a td
-    var tdElement = document.createElement('td'); 
-
-    //put shit in it
-    tdElement.textContent = this.averageCookiesPerHour[i];
-
-    //locate the section with id=profiles
-    var trElement = document.getElementById('Table-body-dubai');
-
-    trElement.appendChild(tdElement);
-  }
+  var tdLastElement = document.createElement('td');
+  var trLastElement = document.getElementById('Table-body-dubai');
+  tdLastElement.textContent = this.totalCookiesPerDay;
+  trLastElement.appendChild(tdLastElement);
 };
 Store.prototype.displayParis = function () {
   for (var i = 0; i < paris.averageCustomersPerHour.length; i++) {
     //make a td
-    var tdElement = document.createElement('td'); 
+    var tdElement = document.createElement('td');
 
     //put shit in it
     tdElement.textContent = this.averageCookiesPerHour[i];
@@ -116,11 +117,15 @@ Store.prototype.displayParis = function () {
 
     trElement.appendChild(tdElement);
   }
+  var tdLastElement = document.createElement('td');
+  var trLastElement = document.getElementById('Table-body-paris');
+  tdLastElement.textContent = this.totalCookiesPerDay;
+  trLastElement.appendChild(tdLastElement);
 };
 Store.prototype.displayLima = function () {
   for (var i = 0; i < lima.averageCustomersPerHour.length; i++) {
     //make a td
-    var tdElement = document.createElement('td'); 
+    var tdElement = document.createElement('td');
 
     //put shit in it
     tdElement.textContent = this.averageCookiesPerHour[i];
@@ -130,13 +135,17 @@ Store.prototype.displayLima = function () {
 
     trElement.appendChild(tdElement);
   }
+  var tdLastElement = document.createElement('td');
+  var trLastElement = document.getElementById('Table-body-lima');
+  tdLastElement.textContent = this.totalCookiesPerDay;
+  trLastElement.appendChild(tdLastElement);
 };
 Store.prototype.displayHours = function () {
   //populate the hrs
   for (var i = 0; i < hours.length; i++) {
     //var storeRow = document.createElement('tr');
     //make a td
-    var tdElement = document.createElement('td'); 
+    var tdElement = document.createElement('td');
 
     //put shit in it
     tdElement.textContent = hours[i];
@@ -147,10 +156,13 @@ Store.prototype.displayHours = function () {
     //storeRow.appendChild(tdElement);
     trElement.appendChild(tdElement);
   }
+  var tdLastElement = document.createElement('td');
+  var trLastElement = document.getElementById('Hours');
+  tdLastElement.textContent = 'Daily Location Total';
+  trLastElement.appendChild(tdLastElement);
 };
 
-//tableBodySeattle.innerHTML = '';
-
+// make the store objects
 var seattle = new Store('seattle', 23, 65, 6.3);
 var tokyo = new Store('tokyo', 3, 24, 1.2);
 var dubai = new Store('dubai', 11, 38, 3.7);
@@ -171,6 +183,7 @@ paris.cookiesPerCustomer();
 lima.cookiesPerCustomer();
 //call the methods
 seattle.displayHours();
+//call the methods
 seattle.displaySeattle();
 tokyo.displayTokyo();
 dubai.displayDubai();
@@ -183,8 +196,6 @@ console.log('tokyo: ', tokyo);
 console.log('dubai: ', dubai);
 console.log('paris: ', paris);
 console.log('lima: ', lima);
-
-
 
 // Make this into a loop
 
