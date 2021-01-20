@@ -19,18 +19,19 @@ var hours = ['6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am',
 
 // Make a constructor function
 var Store = function(name, minCustomers, maxCustomers, avgPerCookiesPerCustomer) {
-  //properties
+  // properties
   this.name = name;
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
   this.avgPerCookiesPerCustomer = avgPerCookiesPerCustomer;
-  //arrays
+  // arrays
   this.averageCustomersPerHour = [];
   this.averageCookiesPerHour = [];
   this.totalCookiesPerDay = 0;
-  //methods
-  this.numOfCustomersPerHour();
-  this.cookiesPerCustomer();
+  // methods
+  // take methods out of the constructor 
+  // this.numOfCustomersPerHour();
+  // this.cookiesPerCustomer();
 };
 
 Store.prototype.numOfCustomersPerHour = function() {
@@ -53,6 +54,20 @@ var dubai = new Store('dubai', 11, 38, 3.7);
 var paris = new Store('paris', 20, 38, 2.3);
 var lima = new Store('lima', 2, 16, 4.6);
 
+//call the methods
+seattle.numOfCustomersPerHour();
+tokyo.numOfCustomersPerHour();
+dubai.numOfCustomersPerHour();
+paris.numOfCustomersPerHour();
+lima.numOfCustomersPerHour();
+//call the methods
+seattle.cookiesPerCustomer();
+tokyo.cookiesPerCustomer();
+dubai.cookiesPerCustomer();
+paris.cookiesPerCustomer();
+lima.cookiesPerCustomer();
+
+//testing
 console.log('seattle: ', seattle);
 console.log('tokyo: ', tokyo);
 console.log('dubai: ', dubai);
