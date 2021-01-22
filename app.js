@@ -1,7 +1,49 @@
 'use strict';
 
-//var tableBodySeattle = document.getElementById;('Table-body-seattle');
+//variables for store constructor
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+
+//variables for form
+var refreshTableBtn = document.getElementById('RefreshForm');
+var formEl = document.getElementById('AddStore');
+var locationEl = document.getElementById('Location');
+var minCustomersEl = document.getElementById('MinCustomers');
+var maxCustomersEl = document.getElementById('MaxCustomers');
+var avgPerCookiesPerCustomerEl = document.getElementById('AvgPerCookiesPerCustomer');
+var submitEl = document.getElementById('Submit');
+var storeFormDataArray = [];
+
+// ---------------------------------------------
+
+// Form Logic
+
+//add event listener to button to refresh table after data is grabbed from the form
+refreshTableBtn.addEventListener('click', function() {
+  console.log('refresh button');
+});
+
+formEl.addEventListener('submit', function (event) {
+  event.preventDefault(); // we need this to stop forms from refreshing
+  console.log(event.target.location.value);
+  console.log(event.target.minCustomers.value);
+  console.log(event.target.maxCustomers.value);
+  console.log(event.target.avgPerCookiesPerCustomer.value);
+
+  var location = event.target.location.value;
+  var minCustomers = event.target.minCustomers.value;
+  var maxCustomers = event.target.maxCustomers.value;
+  var avgPerCookiesPerCustomer = event.target.avgPerCookiesPerCustomer.value;
+
+  // var seattle = new Store('seattle', 23, 65, 6.3);
+  var storeFromForm = new Store(location, minCustomers, maxCustomers, avgPerCookiesPerCustomer);
+
+  storeFormDataArray.push(storeFromForm);
+  console.log(storeFormDataArray);
+});
+
+// -------------------------------------------
+
+// Stores
 
 // Make a constructor function
 var Store = function(name, minCustomers, maxCustomers, avgPerCookiesPerCustomer) {
@@ -171,6 +213,38 @@ tokyo.displayTokyo();
 dubai.displayDubai();
 paris.displayParis();
 lima.displayLima();
+
+// Form Logic
+//variables for form
+// var refreshTableBtn = document.getElementById('RefreshForm');
+// var locationEl = document.getElementById('Location');
+// var minCustomersEl = document.getElementById('MinCustomers');
+// var maxCustomersEl = document.getElementById('MaxCustomers');
+// var avgPerCookiesPerCustomerEl = document.getElementById('AvgPerCookiesPerCustomer');
+// var submitEl = document.getElementById('Submit');
+// var newStoreFormData = [];
+
+//add event listener to button to refresh table after data is grabbed from the form
+refreshTableBtn.addEventListener('click', function() {
+  console.log('refresh button');
+});
+
+formElement.addEventListener('submit', function (event) {
+  event.preventDefault(); // we need this to stop forms from refreshing
+  console.log(event.target.nickname.value);
+  console.log(event.target.breed.value);
+  console.log(event.target.personality.value);
+
+  var name = event.target.nickname.value;
+  var breed = event.target.breed.value;
+  var personality = event.target.personality.value
+
+  var kittenFromConstructor = new Kitten(name, breed, personality);
+
+  kittens.push(kittenFromConstructor);
+});
+
+
 
 //testing
 // console.log('seattle: ', seattle);
