@@ -173,75 +173,75 @@ paris.displayParis();
 lima.displayLima();
 
 //testing
-console.log('seattle: ', seattle);
-console.log('tokyo: ', tokyo);
-console.log('dubai: ', dubai);
-console.log('paris: ', paris);
-console.log('lima: ', lima);
+// console.log('seattle: ', seattle);
+// console.log('tokyo: ', tokyo);
+// console.log('dubai: ', dubai);
+// console.log('paris: ', paris);
+// console.log('lima: ', lima);
 
-// Make this into a loop
+// // Make this into a loop
 
-//Seattle
-for (var i = 0; i < seattle.averageCustomersPerHour.length; i++) {
-  //make a li
-  var liElement = document.createElement('li'); 
-  //locate the section with id=profiles
-  var sectionElement = document.getElementById('Seattle');
+// //Seattle
+// for (var i = 0; i < seattle.averageCustomersPerHour.length; i++) {
+//   //make a li
+//   var liElement = document.createElement('li'); 
+//   //locate the section with id=profiles
+//   var sectionElement = document.getElementById('Seattle');
 
-  //put content in li
-  liElement.textContent = hours[i] + ': ' + seattle.name + ': ' + seattle.averageCustomersPerHour[i] + ' customers per hour; ' + seattle.averageCookiesPerHour[i] + ' cookies per hour; ';
-  //put everything you made to that section
-  sectionElement.appendChild(liElement); // appends everything
-}
+//   //put content in li
+//   liElement.textContent = hours[i] + ': ' + seattle.name + ': ' + seattle.averageCustomersPerHour[i] + ' customers per hour; ' + seattle.averageCookiesPerHour[i] + ' cookies per hour; ';
+//   //put everything you made to that section
+//   sectionElement.appendChild(liElement); // appends everything
+// }
 
-//Tokyo
-for (var i = 0; i < tokyo.averageCustomersPerHour.length; i++) {
-  //make a li
-  var liElement = document.createElement('li'); 
-  //locate the section with id=profiles
-  var sectionElement = document.getElementById('Tokyo');
+// //Tokyo
+// for (var i = 0; i < tokyo.averageCustomersPerHour.length; i++) {
+//   //make a li
+//   var liElement = document.createElement('li'); 
+//   //locate the section with id=profiles
+//   var sectionElement = document.getElementById('Tokyo');
 
-  //put content in li
-  liElement.textContent = hours[i] + ': ' + tokyo.name + ': ' + tokyo.averageCustomersPerHour[i] + ' customers per hour; ' + tokyo.averageCookiesPerHour[i] + ' cookies per hour; ';
-  //put everything you made to that section
-  sectionElement.appendChild(liElement); // appends everything
-}
+//   //put content in li
+//   liElement.textContent = hours[i] + ': ' + tokyo.name + ': ' + tokyo.averageCustomersPerHour[i] + ' customers per hour; ' + tokyo.averageCookiesPerHour[i] + ' cookies per hour; ';
+//   //put everything you made to that section
+//   sectionElement.appendChild(liElement); // appends everything
+// }
 
-//Dubai
-for (var i = 0; i < dubai.averageCustomersPerHour.length; i++) {
-  //make a li
-  var liElement = document.createElement('li'); 
-  //locate the section with id=profiles
-  var sectionElement = document.getElementById('Dubai');
+// //Dubai
+// for (var i = 0; i < dubai.averageCustomersPerHour.length; i++) {
+//   //make a li
+//   var liElement = document.createElement('li'); 
+//   //locate the section with id=profiles
+//   var sectionElement = document.getElementById('Dubai');
 
-  //put content in li
-  liElement.textContent = hours[i] + ': ' + dubai.name + ': ' + dubai.averageCustomersPerHour[i] + ' customers per hour; ' + dubai.averageCookiesPerHour[i] + ' cookies per hour; ';
-  //put everything you made to that section
-  sectionElement.appendChild(liElement); // appends everything
-}
+//   //put content in li
+//   liElement.textContent = hours[i] + ': ' + dubai.name + ': ' + dubai.averageCustomersPerHour[i] + ' customers per hour; ' + dubai.averageCookiesPerHour[i] + ' cookies per hour; ';
+//   //put everything you made to that section
+//   sectionElement.appendChild(liElement); // appends everything
+// }
 
-//Paris
-for (var i = 0; i < paris.averageCustomersPerHour.length; i++) {
-  //make a li
-  var liElement = document.createElement('li'); 
-  //locate the section with id=profiles
-  var sectionElement = document.getElementById('Paris');
+// //Paris
+// for (var i = 0; i < paris.averageCustomersPerHour.length; i++) {
+//   //make a li
+//   var liElement = document.createElement('li'); 
+//   //locate the section with id=profiles
+//   var sectionElement = document.getElementById('Paris');
 
-  //put content in li
-  liElement.textContent = hours[i] + ': ' + paris.name + ': ' + paris.averageCustomersPerHour[i] + ' customers per hour; ' + paris.averageCookiesPerHour[i] + ' cookies per hour; ';
-  //put everything you made to that section
-  sectionElement.appendChild(liElement); // appends everything
-}
+//   //put content in li
+//   liElement.textContent = hours[i] + ': ' + paris.name + ': ' + paris.averageCustomersPerHour[i] + ' customers per hour; ' + paris.averageCookiesPerHour[i] + ' cookies per hour; ';
+//   //put everything you made to that section
+//   sectionElement.appendChild(liElement); // appends everything
+// }
 
-//Lima
-for (var i = 0; i < lima.averageCustomersPerHour.length; i++) {
-  //make a li
-  var liElement = document.createElement('li'); 
-  //locate the section with id=profiles
-  var sectionElement = document.getElementById('Lima');
+// //Lima
+// for (var i = 0; i < lima.averageCustomersPerHour.length; i++) {
+//   //make a li
+//   var liElement = document.createElement('li'); 
+//   //locate the section with id=profiles
+//   var sectionElement = document.getElementById('Lima');
 
-  //put content in li
-  liElement.textContent = hours[i] + ': ' + lima.name + ': ' + lima.averageCustomersPerHour[i] + ' customers per hour; ' + lima.averageCookiesPerHour[i] + ' cookies per hour; ';
-  //put everything you made to that section
-  sectionElement.appendChild(liElement); // appends everything
-}
+//   //put content in li
+//   liElement.textContent = hours[i] + ': ' + lima.name + ': ' + lima.averageCustomersPerHour[i] + ' customers per hour; ' + lima.averageCookiesPerHour[i] + ' cookies per hour; ';
+//   //put everything you made to that section
+//   sectionElement.appendChild(liElement); // appends everything
+// }

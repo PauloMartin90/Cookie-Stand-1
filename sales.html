@@ -20,6 +20,7 @@
     <h2>Stores</h2>
     <section>
       <h3>Cookies Sold Per Hour</h3>
+      <button id="RefreshForm">Refresh Store</button>
       <table class="minimalistBlack">
         <tbody>
           <thead>
@@ -46,29 +47,28 @@
       </table>
     </section>
     <section>
-      <h3>Seattle</h3>
-      <ul id="Seattle">
-      </ul>
-    </section>
-    <section>
-      <h3>Tokyo</h3>
-      <ul id="Tokyo">
-      </ul>
-    </section>
-    <section>
-      <h3>Dubai</h3>
-      <ul id="Dubai">
-      </ul>
-    </section>
-    <section>
-      <h3>Paris</h3>
-      <ul id="Paris">
-      </ul>
-    </section>
-    <section>
-      <h3>Lima</h3>
-      <ul id="Lima">
-      </ul>
+      <form id="AddStore">
+        <fieldset>
+          <legend>Add a Store</legend>
+          <label>
+            Location
+            <input type="text" name="Location">
+          </label>
+          <label>
+            Min Customers
+            <input type="text" name="minCustomers">
+          </label>
+          <label>
+            Max Customers
+            <input type="text" name="maxCustomers">
+          </label>
+          <label>
+            Average Cookies per Customer
+            <input type="text" name="avgPerCookiesPerCustomer">
+          </label>
+        </fieldset>
+        <button type="submit">Submit Store</button>
+      </form>
     </section>
   </main>
   <script src="app.js"></script>
