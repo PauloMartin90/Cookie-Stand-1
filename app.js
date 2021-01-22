@@ -214,38 +214,6 @@ dubai.displayDubai();
 paris.displayParis();
 lima.displayLima();
 
-// Form Logic
-//variables for form
-// var refreshTableBtn = document.getElementById('RefreshForm');
-// var locationEl = document.getElementById('Location');
-// var minCustomersEl = document.getElementById('MinCustomers');
-// var maxCustomersEl = document.getElementById('MaxCustomers');
-// var avgPerCookiesPerCustomerEl = document.getElementById('AvgPerCookiesPerCustomer');
-// var submitEl = document.getElementById('Submit');
-// var newStoreFormData = [];
-
-//add event listener to button to refresh table after data is grabbed from the form
-refreshTableBtn.addEventListener('click', function() {
-  console.log('refresh button');
-});
-
-formElement.addEventListener('submit', function (event) {
-  event.preventDefault(); // we need this to stop forms from refreshing
-  console.log(event.target.nickname.value);
-  console.log(event.target.breed.value);
-  console.log(event.target.personality.value);
-
-  var name = event.target.nickname.value;
-  var breed = event.target.breed.value;
-  var personality = event.target.personality.value
-
-  var kittenFromConstructor = new Kitten(name, breed, personality);
-
-  kittens.push(kittenFromConstructor);
-});
-
-
-
 //testing
 // console.log('seattle: ', seattle);
 // console.log('tokyo: ', tokyo);
