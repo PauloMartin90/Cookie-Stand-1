@@ -6,12 +6,9 @@ var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 //variables for form
 var refreshTableBtn = document.getElementById('RefreshForm');
 var formEl = document.getElementById('AddStore');
-// var locationEl = document.getElementById('Location');
-// var minCustomersEl = document.getElementById('MinCustomers');
-// var maxCustomersEl = document.getElementById('MaxCustomers');
-// var avgPerCookiesPerCustomerEl = document.getElementById('AvgPerCookiesPerCustomer');
-// var submitEl = document.getElementById('Submit');
+
 var storeFormDataArray = [];
+var shops = [];
 
 // -----------------------------
 
@@ -47,6 +44,8 @@ Store.prototype.cookiesPerCustomer = function() {
     this.totalCookiesPerDay += hourlyCookies;
   }
 };
+
+
 Store.prototype.displaySeattle = function () {
   for (var i = 0; i < seattle.averageCustomersPerHour.length; i++) {
     //make a td
@@ -184,6 +183,7 @@ var tokyo = new Store('tokyo', 3, 24, 1.2);
 var dubai = new Store('dubai', 11, 38, 3.7);
 var paris = new Store('paris', 20, 38, 2.3);
 var lima = new Store('lima', 2, 16, 4.6);
+shops.push(seattle, tokyo, dubai, paris, lima);
 
 //call the methods
 seattle.numOfCustomersPerHour();
@@ -212,7 +212,13 @@ lima.displayLima();
 
 //add event listener to button to refresh table after data is grabbed from the form
 refreshTableBtn.addEventListener('click', function() {
-  seattle.displayNewStoreFromForm();
+  shops.push(storeFormDataArray[0]);
+  shops[5].displayNewStoreFromForm();
+  for (var i = 0; i < shops.length; i++) {
+
+  }
+  console.log('form ', storeFormDataArray);
+  console.log('shops ', shops);
 });
 
 formEl.addEventListener('submit', function (event) {
@@ -223,12 +229,12 @@ formEl.addEventListener('submit', function (event) {
   console.log(event.target.avgPerCookiesPerCustomer.value);
 
   var location = event.target.location.value;
-  var minCustomers = event.target.minCustomers.value;
-  var maxCustomers = event.target.maxCustomers.value;
-  var avgPerCookiesPerCustomer = event.target.avgPerCookiesPerCustomer.value;
+  var minCustomers = parseInt(event.target.minCustomers.value);
+  var maxCustomers = parseInt(event.target.maxCustomers.value);
+  var avgPerCookiesPerCustomer = parseInt(event.target.avgPerCookiesPerCustomer.value);
 
   // var seattle = new Store('seattle', 23, 65, 6.3);
-  var storeFromForm = new Store(location, minCustomers, maxCustomers, avgPerCookiesPerCustomer);
+  var storeFromForm = new Store('new', minCustomers, maxCustomers, avgPerCookiesPerCustomer);
 
   storeFormDataArray.push(storeFromForm);
   console.log(storeFormDataArray);
