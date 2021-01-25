@@ -177,6 +177,7 @@ header .social a:hover {
 
 .two-panel img {
   border-radius: 25%;
+  width: 75%;
 }
 
 section.menu {
@@ -184,6 +185,11 @@ section.menu {
   width: 100%;
   display: flex;
   justify-content: center;
+  background: url(images/menu-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .menu-border {
