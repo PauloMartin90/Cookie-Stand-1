@@ -1,80 +1,101 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!-- Is not rendered in the browser but is there to provide meta data about the content we are showing -->
-  <title>Salmon Cookies</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <title>Salmon Cookies</title>
+    <script src="https://kit.fontawesome.com/3d57454b78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
 <body>
 
   <header>
-    <h1>Salmon Cookies: Sales</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="sales.html">Sales</a>
-    </nav>
+    <div class="wrapper">
+      <h2><i class="fas fa-fish"></i> SC</h2>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#AboutUs">About Us</a>
+        <a href="#Menu">Menu</a>
+        <a href="#Location">Location</a>
+        <a href="sales.html">Sales</a>
+      </nav>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+        <a href="#"><i class="fas fa-envelope-square"></i></a>
+      </div>
+    </div>
   </header>
+
   <main>
-    <h2>Stores</h2>
-    <section>
-      <h3>Cookies Sold Per Hour</h3>
-      <button id="RefreshForm">Refresh Store</button>
-      <table class="minimalistBlack">
-        <tbody>
-          <thead>
-            <tr id="Hours">
-              <td></td>
+    <div class="wrapper">
+      <section class="blade">
+        <h3>Store Data</h3>
+        <p>Cookies Sold Per Hour</p>
+        <table class="minimalistBlack">
+          <tbody>
+            <thead>
+              <tr id="Hours">
+                <td></td>
+              </tr>
+            </thead>
+            <tr id="Table-body-seattle">
+              <td>Seattle</td>
             </tr>
-          </thead>
-          <tr id="Table-body-seattle">
-            <td>Seattle</td>
-          </tr>
-          <tr id="Table-body-tokyo">
-            <td>Tokyo</td>
-          </tr>
-          <tr id="Table-body-dubai">
-            <td>Dubai</td>
-          </tr>
-          <tr id="Table-body-paris">
-            <td>Paris</td>
-          </tr>
-          <tr id="Table-body-lima">
-            <td>Lima</td>
-          </tr>
-          <tr id="Table-body-new">
-            <td>New</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section>
-      <form id="AddStore">
-        <fieldset>
-          <legend>Add a Store</legend>
-          <label>
-            Location
-            <input type="text" name="location" id="Location">
-          </label>
-          <label>
-            Min Customers
-            <input type="text" name="minCustomers" id="MinCustomers">
-          </label>
-          <label>
-            Max Customers
-            <input type="text" name="maxCustomers" id="MaxCustomers">
-          </label>
-          <label>
-            Average Cookies per Customer
-            <input type="text" name="avgPerCookiesPerCustomer" id="AvgPerCookiesPerCustomer">
-          </label>
-        </fieldset>
-        <button type="submit" id="Submit">Submit Store</button>
-      </form>
-    </section>
+            <tr id="Table-body-tokyo">
+              <td>Tokyo</td>
+            </tr>
+            <tr id="Table-body-dubai">
+              <td>Dubai</td>
+            </tr>
+            <tr id="Table-body-paris">
+              <td>Paris</td>
+            </tr>
+            <tr id="Table-body-lima">
+              <td>Lima</td>
+            </tr>
+            <tr id="Table-body-new">
+              <td>New</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <form id="AddStore">
+          <fieldset>
+            <label>Add a Store</label>
+            <label>
+              Location
+              <input type="text" name="location" id="Location">
+            </label>
+            <label>
+              Min Customers
+              <input type="text" name="minCustomers" id="MinCustomers">
+            </label>
+            <label>
+              Max Customers
+              <input type="text" name="maxCustomers" id="MaxCustomers">
+            </label>
+            <label>
+              Average Cookies per Customer
+              <input type="text" name="avgPerCookiesPerCustomer" id="AvgPerCookiesPerCustomer">
+            </label>
+            <button class="btn" type="submit" id="Submit">Submit Store</button>
+            <button class="btn" id="RefreshForm">Refresh Table</button>
+          </fieldset>
+        </form>
+      </section>
+    </div>
   </main>
+  <footer>
+    <div class="wrapper">
+      <h4>Made by Mason Aviles</h4>
+      <p>images from <a href="https://unsplash.com">Unplash</a></p>
+      <p>icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+      <p>map generated from <a href="https://www.maps.ie/create-google-map/">Maps.ie</a></p>
+    </div>
+  </footer>
   <script src="app.js"></script>
 </body>
 
