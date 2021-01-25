@@ -2,22 +2,99 @@
 <html>
 
 <head>
-  <!-- Is not rendered in the browser but is there to provide meta data about the content we are showing -->
   <title>Salmon Cookies</title>
+  <script src="https://kit.fontawesome.com/3d57454b78.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header>
-    <h1>Salmon Cookies</h1>
+    <div class="wrapper">
+      <h2><i class="fas fa-fish"></i> SC</h2>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#AboutUs">About Us</a>
+        <a href="#Menu">Menu</a>
+        <a href="#Location">Location</a>
+        <a href="sales.html">Sales</a>
+      </nav>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+        <a href="#"><i class="fas fa-envelope-square"></i></a>
+      </div>
+    </div>
   </header>
   <main>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="sales.html">Sales</a>
-    </nav>
+    <section class="hero">
+      <div class="wrapper text">
+        <h1>Salmon Cookies</h1>
+        <p>Artfully made from scratch taiyaki cookies</p>
+        <a href="#Menu" class="btn">See Our Menu</a>
+      </div>
+    </section>
+    <div class="wrapper">
+      <section class="blade">
+        <div class="two-panel">
+          <div class="text" id="AboutUs">
+            <h3>Salmon Cookies: About Us</h3><i class="fas fa-fish title-icon"></i>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis neque cupiditate ut? Illum quis, neque, ipsa hic sit expedita est nulla facere fuga aut esse repudiandae voluptate ea officia accusamus.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis neque cupiditate ut? Illum quis, neque, ipsa hic sit expedita est nulla facere fuga aut esse repudiandae voluptate ea officia accusamus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis neque cupiditate ut? Illum quis, neque, ipsa hic sit expedita est nulla facere fuga aut esse repudiandae voluptate ea officia accusamus.</p>
+          </div>
+          <img src="images/taiyaki.jpg" alt="">
+        </div>
+      </section>
+      <section class="blade">
+        <div class="two-panel">
+          <img src="images/ourstory.jpg" alt="">
+          <div class="text">
+            <h3>Our Story</h3><i class="fas fa-fish title-icon"></i>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, illum doloremque? Laudantium magni, ipsam labore nisi temporibus magnam ipsa consequatur reprehenderit nobis quis cupiditate alias veniam libero. Recusandae, facere odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos necessitatibus voluptate beatae praesentium ad perferendis maiores cum ipsum vel facilis eos obcaecati quae labore quas magni expedita, consectetur hic sequi?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, illum doloremque? Laudantium magni, ipsam labore nisi temporibus magnam ipsa consequatur reprehenderit nobis quis cupiditate alias veniam libero. Recusandae, facere odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="menu">
+      <div class="wrapper">
+        <section class="blade" id="Menu">
+          <div class="menu-border">
+            <h3>Menu</h3><i class="fas fa-fish title-icon"></i>
+            <ul>
+              <li>Original Salmon Cookies</li>
+              <li>... $ 1.xx</li>
+              <li>Trout Cookies</li>
+              <li>... $ 1.xx</li>
+              <li>Tuna Cookies</li>
+              <li>... $ 1.xx</li>
+              <li>Mary Jane Cookies</li>
+              <li>... $ 4.xx</li>
+              <li>Plain Jane Cookies</li>
+              <li>... $ 1.xx</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+    <div class="wrapper">
+      <section class="blade" id="Location">
+        <h3>Our Location</h3><i class="fas fa-fish title-icon"></i>
+        <div class="map">
+          <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=pike%20place+(Salmon%20Cookies)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="400" frameborder="0"></iframe></div>
+        </div>
+      </section>
+    </div>
   </main>
+  <footer>
+    <div class="wrapper">
+      <h4>Made by Mason Aviles</h4>
+      <p>images from <a href="https://unsplash.com">Unplash</a></p>
+      <p>icons from <a href="https://fontawesome.com/">Font Awesome</a></p>
+      <p>map generated from <a href="https://www.maps.ie/create-google-map/">Maps.ie</a></p>
+    </div>
+  </footer>
   <script src="app.js"></script>
 </body>
 
