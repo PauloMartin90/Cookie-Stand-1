@@ -206,8 +206,6 @@ dubai.displayDubai();
 paris.displayParis();
 lima.displayLima();
 
-// ---------------------------------------------
-
 // Form Logic
 
 //add event listener to button to refresh table after data is grabbed from the form
@@ -241,6 +239,7 @@ formEl.addEventListener('submit', function (event) {
 });
 
 // -------------------------------------------
+
 
 //testing
 // console.log('seattle: ', seattle);
