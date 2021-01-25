@@ -11,7 +11,7 @@
   display: block;
 }
 
-main, header {
+main, header, footer {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -57,6 +57,15 @@ nav a {
 nav a:hover {
   color: #EC7B72;
   background-color: black;
+}
+
+a {
+  color: #BC4062;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EC7B72;
 }
 
 header .social {
@@ -132,6 +141,70 @@ header .social a:hover {
   color: #F7F7F6;
   border: 3px solid #F7F7F6;
 }
+
+.blade {
+  margin: 4rem 0;
+}
+
+.blade h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.blade p {
+  font-size: 1.05rem;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.title-icon {
+  font-size: 1.5rem;
+  color: #BC4062;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.two-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(1, 50%);
+  justify-items: center;
+}
+
+.two-panel img {
+  border-radius: 25%;
+}
+
+section.menu {
+  background-color: #BC4062;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-border {
+  background-color: #AF8693;
+  padding: 2rem;
+  border: 3px white dotted;
+  width: 40%;
+  margin: 0 auto;
+  color: white;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(5, 50%);
+}
+
+.menu ul li {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.25rem 0;
+}
 /* Styles grabbed from an online generator for now */
 
 table.minimalistBlack {
@@ -177,4 +250,27 @@ label {
   margin: 0.5rem 0;
   display: flex;
   flex-direction: column;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #7E6B7D;
+  color: white;
+  height: 12rem;
+  font-size: 0.9rem;
+}
+
+footer .wrapper {
+  text-align: right;
+  color: white;
+  line-height: 1.25rem;
+}
+
+footer a {
+  color: #EC7B72;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #BC4062;
 }
