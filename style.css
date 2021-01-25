@@ -1,3 +1,137 @@
+/* body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+} */
+
+.wrapper {
+  width: 960px;
+  display: block;
+}
+
+main, header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 4rem;
+  background-color: #BC4062;
+  color: white;
+}
+
+header .wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+header h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  margin-right: 3rem;
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  font-size: 1.25rem;
+}
+
+nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 3rem;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+nav a:hover {
+  color: #EC7B72;
+  background-color: black;
+}
+
+header .social {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+header .social a {
+  color: black;
+  margin-right: 0.25rem;
+  font-size: 1.5rem;
+}
+
+header .social a:hover {
+  color: white;
+}
+
+.hero {
+  background: url(images/hero.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hero .text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 1rem;
+  color: white;
+}
+
+.hero h1,
+.hero p {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.hero p {
+  padding: 0.5rem;
+}
+
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #BC4062;
+  color: #F7F7F6;
+  border: 3px solid #F7F7F6;
+  padding: 0.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  width: 9rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #F7F7F6;
+  border: 3px solid #F7F7F6;
+}
 /* Styles grabbed from an online generator for now */
 
 table.minimalistBlack {
